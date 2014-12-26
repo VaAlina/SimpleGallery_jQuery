@@ -16,7 +16,7 @@ $(document).ready(function(){
       width:'500px'
     }, 1000);
 	
-    $("img").not(this).animate({
+    $("img").not(this).removeClass("clicked").animate({
       right:'250px',
       opacity:'0.5',
       width:'100px'
@@ -33,6 +33,9 @@ $(document).ready(function(){
 </script> 
 
 <style>
+body{
+background-color: #FFF8DC;
+}
 img{
 margin-left: 100px;
 width: 100px;
