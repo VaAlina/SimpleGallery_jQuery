@@ -1,50 +1,59 @@
-SimpleGallery_jQuery
-====================
 <!DOCTYPE html>
+<html>
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-<style>
-body{
-background-color: #5F9EA0;
-}
-img{
-height:150px;
-box-shadow: 0 0 10px rgba(0,0,0,0.5);
-opacity:0.5;
-}
-div{
-text-align: center;
-align: botton;
-}
-</style>
-
-<title>gallery</title>
-<h1>Gallery</h1>
-</head>
-<body>
-<div>
-<img src="img1.jpg"/>
-<img src="img2.jpg"/>
-<img src="img3.jpg"/>
-</div>
-<script>
+<script> 
 $(document).ready(function(){
   $("img").click(function(){
-    $(this).animate({
-      left:'250px',
+    $(".clicked").animate({ 
+      marginLeft: '100px',
+      opacity:'0,5',
+      width:'100px'
+   }, 1000);
+    
+    $(this).addClass("clicked").animate({
+      marginLeft: '550px',
       opacity:'1',
-      height:'300px'
+      width:'500px'
     }, 1000);
 	
     $("img").not(this).animate({
       right:'250px',
       opacity:'0.5',
-      height:'150px'
+      width:'100px'
     }, 1000);
 });
+
+  $("img").mouseover(function(){
+    $(this).fadeTo(500, 1);
+  });
+  $("img").mouseout(function(){
+    $(this).not(".clicked").fadeTo(500, 0.5);
+  });
 });
 </script> 
+
+<style>
+img{
+margin-left: 100px;
+width: 100px;
+}
+</style>
+</head>
+<body>
+<div tabindex=0>
+
+<img src="a.jpg"></br>
+<img src="b.jpg"></br>
+<img src="c.jpg"></br>
+<img src="d.jpg"></br>
+<img src="e.jpg"></br>
+<img src="f.jpg"></br>
+<img src="g.jpg"></br>
+<img src="h.jpg">
+
+<div>
+
 
 </body>
 </html>
