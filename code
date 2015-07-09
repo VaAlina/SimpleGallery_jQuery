@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script> 
-$(document).ready(function(){
-  $("img").click(function(){
-    $(".clicked").animate({ 
-      marginLeft: '100px',
-      opacity:'0,5',
-      width:'100px'
-    }, 1000);
-    
-    $(this).addClass("clicked").animate({
-      marginLeft: '550px',
-      width:'500px'
-    }, 1000);
-	
-    $("img").not(this).removeClass("clicked").animate({
-      right:'250px',
-      opacity:'0.5',
-      width:'100px'
-    }, 1000);
-});
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("img").click(function() {
+                $(".clicked").animate({
+                    marginLeft: '100px',
+                    opacity: '0,5',
+                    width: '100px'
+                }, 1000);
 
-  $("img").mouseover(function(){
-    $(this).fadeTo(500, 1);
-  });
-  $("img").mouseout(function(){
-    $(this).not(".clicked").fadeTo(500, 0.5);
-  });
-});
-</script> 
+                $(this).addClass("clicked").animate({
+                    marginLeft: '550px',
+                    width: '500px'
+                }, 1000);
 
-<style>
-body{
-background-color: #FFF8DC;
-}
-img{
-margin-left: 100px;
-width: 100px;
-box-shadow: 10px 10px 5px #888888;
-}
-</style>
+                $("img").not(this).removeClass("clicked").animate({
+                    right: '250px',
+                    opacity: '0.5',
+                    width: '100px'
+                }, 1000);
+            });
+
+            $("img").mouseover(function() {
+                $(this).fadeTo(500, 1);
+            });
+            $("img").mouseout(function() {
+                $(this).not(".clicked").fadeTo(500, 0.5);
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            background-color: #FFF8DC;
+        }
+        
+        img {
+            margin-left: 100px;
+            width: 100px;
+            box-shadow: 10px 10px 5px #888888;
+        }
+    </style>
 </head>
+
 <body>
-<div tabindex=0>
+    <div tabindex=0>
 
-<img src="a.jpg"></br>
-<img src="b.jpg"></br>
-<img src="c.jpg"></br>
-<img src="d.jpg"></br>
-<img src="e.jpg"></br>
-<img src="f.jpg"></br>
-<img src="g.jpg"></br>
-<img src="h.jpg">
+        <img src="a.jpg"></br>
+        <img src="b.jpg"></br>
+        <img src="c.jpg"></br>
+        <img src="d.jpg"></br>
+        <img src="e.jpg"></br>
+        <img src="f.jpg"></br>
+        <img src="g.jpg"></br>
+        <img src="h.jpg">
 
-<div>
+    </div>
 
 
 </body>
+
 </html>
